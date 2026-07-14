@@ -1,63 +1,37 @@
-# Crystal Duel 2
+# Crystal Duel 2 — Mobile Edition
 
-5レーン制のスマホ向けシューティングバトルゲームのプロトタイプです。  
-GitHub Pagesでそのまま公開できます。
+スマホ専用の5レーン対戦シューティングです。  
+通常の細長いスマホ画面と、開いた折りたたみスマホのワイド画面に対応しています。
 
-## ルール
+## 主な変更
 
-- 左右にHP15のクリスタル
-- キャラクターは不死身
-- キャラクターは上下5レーンのみ移動
-- `↗` `→` `↘` の3方向攻撃
-- 斜め弾は上下端を越えると反対側から再出現
-- 同時に出せる弾は全方向合計4発
-- 通常弾のダメージは1
-- チャージ弾の想定ダメージは2
-- 弾同士は相殺
-- 強い弾は弱い弾を1ダメージ分貫通
-- クリスタルHPが0になると敗北
+- スマホのタッチ操作専用
+- ゲーム画面が必ず表示されるようCanvasサイズ処理を修正
+- キャラクター画像を読み込めない場合の代替表示を追加
+- 上下移動ボタンを縦に配置
+- `↗ / → / ↘ / GUARD` をひし形に配置
+- 縦長画面・横長画面・折りたたみワイド画面にレスポンシブ対応
 
-## 操作
+## GitHub Pagesで公開する方法
 
-### スマホ
-画面下のボタンを使用します。
-
-### PC
-- 上下移動: `↑` `↓`
-- 攻撃: `Q` `W` `E`
-- ガード: `Space`
-
-## GitHub Pagesで公開
-
-1. このフォルダをGitHubリポジトリへアップロード
-2. GitHubの `Settings`
-3. `Pages`
+1. ZIPを解凍
+2. 中身をGitHubリポジトリのルートにアップロード
+3. GitHubの `Settings` → `Pages`
 4. `Deploy from a branch`
-5. `main` / `/root` を選択
+5. `main` と `/root` を選択
 
-## ファイル構成
+## ファイル
 
 ```text
-crystal-duel-2/
-├─ index.html
-├─ style.css
-├─ game.js
-├─ README.md
-├─ LICENSE
-├─ .gitignore
-└─ assets/
-   ├─ neutral.png
-   ├─ guard.png
-   ├─ attack.png
-   └─ hit.png
+crystal-duel-2-mobile/
+├── index.html
+├── style.css
+├── game.js
+├── README.md
+├── LICENSE
+└── assets/
+    ├── neutral.png
+    ├── guard.png
+    ├── attack.png
+    └── hit.png
 ```
-
-## 今後の追加候補
-
-- 長押しチャージ攻撃
-- 2人対戦・オンライン対戦
-- SE・BGM
-- ヒットストップ
-- タイトル画面
-- キャラクター選択
-- 難易度設定
