@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#07101f" />
+  <title>Crystal Duel 2</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hud">
+      <div class="crystal-status enemy">
+        <span>ENEMY CRYSTAL</span>
+        <div class="hpbar"><i id="enemyHpBar"></i></div>
+        <strong id="enemyHp">15</strong>
+      </div>
+      <div class="title">CRYSTAL DUEL 2</div>
+      <div class="crystal-status player">
+        <span>YOUR CRYSTAL</span>
+        <div class="hpbar"><i id="playerHpBar"></i></div>
+        <strong id="playerHp">15</strong>
+      </div>
+    </header>
+
+    <section class="game-wrap">
+      <canvas id="game" width="1280" height="720" aria-label="Crystal Duel 2 game screen"></canvas>
+
+      <div id="message" class="message hidden">
+        <h1 id="messageTitle"></h1>
+        <button id="restartBtn">もう一度</button>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Game controls">
+      <div class="move-pad">
+        <button id="upBtn" class="control move">▲</button>
+        <button id="downBtn" class="control move">▼</button>
+      </div>
+
+      <button id="guardBtn" class="control guard">GUARD</button>
+
+      <div class="attack-pad">
+        <button data-shot="-1" class="control shot">↗</button>
+        <button data-shot="0" class="control shot">→</button>
+        <button data-shot="1" class="control shot">↘</button>
+      </div>
+    </section>
+
+    <footer>
+      <span>弾数: <b id="shotCount">0</b>/4</span>
+      <span>操作: 上下移動・ガード・3方向ショット</span>
+    </footer>
+  </main>
+
+  <script src="./game.js"></script>
+</body>
+</html>
